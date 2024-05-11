@@ -32,10 +32,6 @@ body, html {
         min-width: 100vw; /* Ensure slide takes full viewport width */
         height: 100vh; /* Ensure slide takes full viewport height */
         min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Center content vertically */
-        align-items: center; /* Center content horizontally */
     }
 
     /* Other mobile-specific adjustments */
