@@ -18,7 +18,7 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     min-width: 25vh;
-    max-width: 40vh;
+    max-width: 40vw;
     min-height: 25vh;
     text-align: center;
     flex-direction: column;
@@ -29,6 +29,7 @@ body, html {
     .slide {
         padding: 0; /* Removes padding on mobile devices */
         width: 100vw;
+        min-width: 100vw;
         height: 100vh;
     }
 
