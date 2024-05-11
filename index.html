@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="surveyForm" action="https://submit-form.com/UJISgLzMP">
+            <!-- Hidden Input for Unique ID -->
+        <input type="hidden" name="time_test_taken" id="surveyID">
+        <!-- Landing Page -->
+        <div class="slide active" id="landingPage">
+            <h1>Mean Opinion Score <br> Survey<br><b></h1>
+                <h3>Please listen carefuly to the voice samples and rate them based on:</h3>
+                <p><b><span style="color: #76B900;">Similarity:</span></b> how similar the voices of both audios sound.</p>
+                <p>Each slide will display two audio samples.</p>
+                    <h5> The rating should reflect your evaluation <b><span
+                        style="color:#76B900; font-weight: bolder">only on this parameter</span></b> and
+                not on content,
+                grammar, or audio quality.</h5>
+            <h5> The scale ranges from <b><span style="color:red; font-weight: bolder">1</span></b> to
+                <b><span style="color:#76B900; font-weight: bolder">4</span></b>
+                with increments of <b><span style="color:#76B900; font-weight: bolder">1</span></b>.<br>
+            </h5>
+            <h5>Use the slider to make your choice!</h5>
+            <table>
+                <tr>
+                    <td class="MOS_1">1</td>
+                    <td class="MOS_2">2</td>
+                    <td class="MOS_3">3</td>
+                    <td class="MOS_4">4</td>
+                </tr>
+                <tr>
+                    <td class="MOS_1">Different (sure)</td>
+                    <td class="MOS_2">Different (unsure)</td>
+                    <td class="MOS_3">Same (unsure)</td>
+                    <td class="MOS_4">Same (sure)</td>
+                </tr>
+            </table>
+            <h5>Please complete the survey in a <span style="color: #76B900">quiet environment</span>.</h5>
+            <h6><span style="color: grey">The following data is collected: The entries made in the survey and the time of the survey. The survey is anonymous and no conclusions can be drawn about individuals.</span></h6>
+            <button type="button" onclick="nextSlide()">Start Survey</button>
+        </div>
+
+        <div class="slide" id="inputSelectionSlide">
+            <h2>Information about you</h2>
+            <p>Select the device type you are using for this survey:</p>
+            <select name="device_type" id="deviceSelectionDropDown" required>
+                <option value="">Select your device</option>
+                <option value="notebook">Notebook</option>
+                <option value="desktop">Desktop</option>
+                <option value="smartdevice">Smartphone/Tablet</option>
+            </select>
+            <p>Enter the name of your device:</p>
+            <input type="text" id="deviceName" name="deviceName" placeholder="e.g. iPhone 13, MacBook Air, Galaxy S21" maxlength="128" required>
+            <p>Select the audio device you are using:</p>
+            <select name="audio_type" id="audioSelectionDropDown" required>
+                <option value="">Select your audio device</option>
+                <option value="speakers">Speakers</option>
+                <option value="headphones">Headphones</option>
+            </select>
+           <p>Enter the name of your audio device:</p>
+            <input type="text" id="audioDeviceName" name="audioDeviceName" placeholder="e.g. built-in speakers, AirPods, Google Pixel Buds" maxlength="128" required>
+            <p>Enter your age:</p>
+            <input type="number" id="age" name="age" min="10" max="99" inputmode="numeric" required>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" id="deviceSelectionNxtBtn">Next</button>
+            </div>
+        </div>
+        
+        <!-- Audio Samples -->
+        <!-- Repeat this block for each audio sample -->
+        <!-- Inside each audio sample slide -->
+        <div class="slide" id="sample1">
+            <h2>Sample 1 of 10</h2>
+            <audio controls>
+                <source src="audio/file_10.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_46.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample2">
+            <h2>Sample 2 of 10</h2>
+            <audio controls>
+                <source src="audio/file_1.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_27.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample3">
+            <h2>Sample 3 of 10</h2>
+            <audio controls>
+                <source src="audio/file_15.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_37.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample4">
+            <h2>Sample 4 of 10</h2>
+            <audio controls>
+                <source src="audio/file_13.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_26.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample5">
+            <h2>Sample 5 of 10</h2>
+            <audio controls>
+                <source src="audio/file_18.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_31.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample6">
+            <h2>Sample 6 of 10</h2>
+            <audio controls>
+                <source src="audio/file_21.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_42.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample7">
+            <h2>Sample 7 of 10</h2>
+            <audio controls>
+                <source src="audio/file_3.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_45.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample8">
+            <h2>Sample 8 of 10</h2>
+            <audio controls>
+                <source src="audio/file_36.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_44.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample9">
+            <h2>Sample 9 of 10</h2>
+            <audio controls>
+                <source src="audio/file_31.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_24.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        <div class="slide" id="sample10">
+            <h2>Sample 10 of 10</h2>
+            <audio controls>
+                <source src="audio/file_6.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <audio controls>
+                <source src="audio/file_33.wav" type="audio/wav">
+                Your browser does not support the audio tag.
+            </audio>
+            <input type="range" name="rating" min="1" max="4" class="slider">
+            <div class="label-row">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="navigation-buttons">  <!-- Container for navigation buttons -->
+                <button type="button" onclick="prevSlide()">Back</button>
+                <button type="button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Submission Slide -->
+        <div class="slide" id="submissionPage">
+            <h1>Submit Survey</h1>
+            <p>Thank you for participating. Click below to submit your responses.</p>
+            <button type="submit">Submit Survey</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

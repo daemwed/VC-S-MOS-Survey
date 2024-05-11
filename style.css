@@ -1,0 +1,165 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Full height */
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4; /* Light gray background */
+}
+
+.slide {
+    width: 100vw; 
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 25vh;
+    max-width: 40vh;
+    min-height: 25vh;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .slide {
+        padding: 0; /* Removes padding on mobile devices */
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Other mobile-specific adjustments */
+}
+
+.active {
+    display: flex;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    background: linear-gradient(to right, red 0%, yellow 50%,#76B900);
+    outline: none;
+    margin-top: 20px; /* Added space above slider */
+    border-radius: 12px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 25px;
+    background: rgb(146, 146, 146);
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5); /* Add shadow here */
+}
+
+.slider::-moz-range-thumb {
+    width: 8px;
+    height: 25px;
+    background: rgb(146, 146, 146);
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5); /* Add shadow here */
+}
+.slider::-ms-thumb {
+    width: 8px;
+    height: 25px;
+    background: rgb(146, 146, 146);
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5); /* Add shadow here for IE/Edge */
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Match slider width */
+    margin-top: 10px; /* Margin for space below slider */
+}
+
+.label-row span {
+    flex: 1;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(to right, red, #76B900);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Added space above buttons */
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 75%; /* Width to spread buttons across the slider */
+}
+
+.MOS_1 {
+    color: red;
+}
+
+.MOS_2 {
+    color: orange;
+}
+
+.MOS_3 {
+    color: yellow;
+}
+
+.MOS_4 {
+    color: #96d727;
+}
+
+.MOS_5 {
+    color: #76B900;
+}
+table {
+    /* text-align: left; */
+    /* padding-left: 5%; */
+    /* color: #76B900; */
+    /* border-collapse: separate; */
+    border-spacing: 20px 2vh; 
+    margin: 0 auto;
+    text-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+input[type="text"] {
+    width: 80%; /* Ensures the input field stretches to the width of its container */
+    padding: 8px; /* Provides internal space between the text and the input field’s border */
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+    border: 1px solid #ccc; /* Subtle border color for minimal design interference */
+    border-radius: 4px; /* Slightly rounded corners for a modern, softened aesthetic */
+}
+input:not([type='range']):invalid {
+    border: 2px solid red;
+}
+
+input:not([type='range']):valid {
+    border: 2px solid green;
+}
+
+select:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+select:valid:not(:placeholder-shown) {
+    border: 2px solid green;
+}
