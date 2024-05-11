@@ -26,7 +26,7 @@ deviceSelectionNxtBtn.addEventListener('click', function() {
         alert("Pleas enter a valid number for your age. Only digits are allowed.");
         ageTextField.value = '';
     }
-    else if(age < 0 || age > 99) {
+    else if(age < 10 || age > 99) {
         alert("Please enter a sane age.");
         ageTextField.value = '';
     }
