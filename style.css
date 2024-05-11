@@ -30,6 +30,7 @@ body, html {
         padding: 0; /* Removes padding on mobile devices */
         width: 100vw;
         min-width: 100vw;
+        min-heigh: 100vh;
         height: 100vh;
     }
 
