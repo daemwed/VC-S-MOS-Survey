@@ -8,10 +8,6 @@ body, html {
     justify-content: center;
     align-items: center;
     background: #f4f4f4; /* Light gray background */
-    overflow-x: hidden
-}
-body {
-    position: relative;
 }
 
 .slide {
