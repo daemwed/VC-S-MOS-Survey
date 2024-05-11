@@ -28,7 +28,6 @@ body, html {
 @media (max-width: 768px) {
     .slide {
         margin-top: 20px;
-        padding: 20px; /* Increase padding */
         width: 100vw;
         min-width: 100vw; /* Ensure slide takes full viewport width */
         height: 100vh; /* Ensure slide takes full viewport height */
