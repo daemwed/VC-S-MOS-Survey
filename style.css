@@ -27,11 +27,15 @@ body, html {
 }
 @media (max-width: 768px) {
     .slide {
-        padding: 2px; 
+        padding: 20px; /* Increase padding */
         width: 100vw;
-        min-width: 100vw;
-        min-heigh: 100vh;
-        height: 100vh;
+        min-width: 100vw; /* Ensure slide takes full viewport width */
+        height: 100vh; /* Ensure slide takes full viewport height */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
     }
 
     /* Other mobile-specific adjustments */
