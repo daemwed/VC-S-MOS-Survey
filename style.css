@@ -32,6 +32,7 @@ body, html {
         min-width: 100vw; /* Ensure slide takes full viewport width */
         height: 100vh; /* Ensure slide takes full viewport height */
         min-height: 100vh;
+        box-sizing: border-box;
     }
 
     /* Other mobile-specific adjustments */
